@@ -2,9 +2,11 @@ from turtle import Turtle
 
 class Snake:
     def __init__(self):
-        x_cor = 0
         self.segments = []
+        self.create_snake()
 
+    def create_snake(self):
+        x_cor = 0
         for _ in range(3):
             tim = Turtle()
             tim.penup()
@@ -47,3 +49,9 @@ class Snake:
         segment = self.segments[0]
         if segment.heading() == 90 or segment.heading() == 270:
             segment.setheading(0)
+
+    def reset_snake(self):
+        for segment in self.segments:
+            segment.goto(1000, 1000)
+        self.segments.clear()
+        self.create_snake()

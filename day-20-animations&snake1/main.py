@@ -39,8 +39,10 @@ while is_game_on:
             or snake.segments[0].xcor() < -299
             or snake.segments[0].ycor() > 299
             or snake.segments[0].ycor() < -299):
-        is_game_on = False
-        score.game_over()
+        # is_game_on = False
+        # score.game_over()
+        score.reset_score()
+        snake.reset_snake()
 
     for segment in snake.segments[1:]: # <- Here, we have done slicing
         if snake.segments[0].distance(segment) < 10:
@@ -58,8 +60,10 @@ while is_game_on:
             if snake.segments[0] == segment:
                 pass
             else:
-                is_game_on = False
-                score.game_over()
+                # is_game_on = False
+                # score.game_over()
+                score.reset_score()
+                snake.reset_snake()
 
 screen.exitonclick()
 
