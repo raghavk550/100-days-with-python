@@ -1,7 +1,7 @@
 import smtplib, datetime as dt, random, pandas
 from turtledemo.clock import current_day
 
-my_email = "raghavkakriayt2@gmail.com"
+my_email = "abc@gmail.com"
 password = "nctewajhlmdnfyjb"
 
 # with open("quotes.txt") as file:
